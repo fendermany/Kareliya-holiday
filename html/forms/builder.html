@@ -1,0 +1,100 @@
+<div class="b-form">
+    <form action="/php/form.php" method="post" data-checkup="true" data-xhr="true">
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title required" for="client">Фамилия, имя, отчество</label>
+
+            <div class="b-form_box_field">
+                <input type="text" name="client" id="client" data-required />
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title required" for="email">Электронная почта</label>
+
+            <div class="b-form_box_field">
+                <input type="text" name="email" id="email" data-required data-pattern="[0-9a-z_.-]+@[0-9a-z_]+\.[a-z]{2,5}" data-pattern-type="email" />
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <div class="b-form_box_title">Вы хотите подписаться на рассылку?</div>
+
+            <div class="b-form_box_field">
+                <label><input type="radio" name="subscribe" value="true" /> Да</label>
+                <label><input type="radio" name="subscribe" value="false" /> Нет</label>
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title required" for="phone">Телефон</label>
+
+            <div class="b-form_box_field">
+                <input type="text" name="phone" id="phone" data-masking="+7 (999) 999-99-99" data-required data-pattern="^(\+7)\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$" data-pattern-type="phone" />
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title" for="time">Удобное для вас время</label>
+
+            <div class="b-form_box_field">
+                <select name="time" id="time" class="js-selectric">
+                    <option value=""></option>
+                    <option value="1">До обеда</option>
+                    <option value="0">После обеда</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title" for="msg">Сообщение</label>
+
+            <div class="b-form_box_field">
+                <textarea name="msg" id="msg"></textarea>
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <div class="b-form_box_title">Группа чекбоксов</div>
+
+            <div class="b-form_box_field list">
+                <label><input type="checkbox" name="confirm" value="1" />&nbsp;Я ознакомлен с <a href="#">публичной офертой</a> и принимаю условия</label>
+                <label><input type="checkbox" name="digest" value="1" />&nbsp;Хочу получать новинки наших каталогов</label>
+            </div>
+
+        </div>
+
+        <div class="b-form_box">
+
+            <label class="b-form_box_title required" for="captcha">Код подтверждения</label>
+
+            <div class="b-form_captcha b-form_box_field">
+
+                <img class="b-form_captcha_img" src="/php/captcha/" alt="" width="120" height="72" />
+                <input type="text" name="captcha" id="captcha" maxlength="5" data-required />
+
+            </div>
+
+        </div>
+
+        <div class="b-form_bottom">
+
+            <button type="submit" class="e-btn e-btn_md e-btn_orange">Записаться на прием</button>
+
+        </div>
+
+    </form>
+</div>

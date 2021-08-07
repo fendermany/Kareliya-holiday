@@ -1,0 +1,64 @@
+/* ----------------------- Default ----------------------- */
+input[type="checkbox"], input[type="radio"] { display: inline-block; margin-right: 7px; }
+
+/* ----------------------- Settings ----------------------- */
+.e-select:focus, .checker:focus, .radio:focus, .uploader:focus { outline: none; }
+
+/* ----------------------- Select ----------------------- */
+.e-select { position: relative; z-index: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.e-select select { position: absolute; z-index: 5; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%; filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; border: none; background: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* ----------------------- Radio-buttons and checkboxes ----------------------- */
+.radio,
+.checker { display: inline-block; position: relative; width: 19px; height: 19px; color: #000; background: #fff; border: 1px solid #0e641f; cursor: pointer; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; -webkit-transition: all 250ms; -moz-transition: all 250ms; -o-transition: all 250ms; transition: all 250ms; }
+
+.radio input,
+.checker input { position: absolute !important; z-index: 50; left: 0 !important; top: 0 !important; width: 100% !important; height: 100% !important; filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; border: none; background: none; cursor: pointer; }
+
+.radio span,
+.checker span { display: block; position: relative; text-align: center; }
+
+.radio span:before,
+.checker span:before { -webkit-transition: all 250ms; -moz-transition: all 250ms; -o-transition: all 250ms; transition: all 250ms; }
+
+.radio.hover, label:hover .radio {  }
+.checker.hover, label:hover .checker {  }
+
+.radio.focus,
+.checker.focus {  }
+
+.m-error .radio,
+.m-error .checker { border-color: #b83c2a !important; box-shadow: 0 0 8px rgba(255, 0, 0, .15); }
+
+.radio.disabled,
+.checker.disabled { opacity: .5 !important; cursor: default !important; pointer-events: none; }
+
+.radio.disabled input,
+.checker.disabled input { cursor: default; }
+
+
+/* ----------------------- Checkboxes states ----------------------- */
+.checker { border-radius: 0; }
+
+.checker span { position: absolute; z-index: 1; left: 0; top: 0; right: 0; bottom: 0; }
+.checker span:before { display: block; width: 100%; height: 100%; content: ''; visibility: hidden; opacity: 0; background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxMSAxMSIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0wIDBoMS44MzNMNS41IDMuNjY3IDkuMTY3IDBIMTF2MS44MzNMNy4zMzMgNS41IDExIDkuMTY3VjExSDkuMTY3TDUuNSA3LjMzMyAxLjgzMyAxMUgwVjkuMTY3TDMuNjY3IDUuNSAwIDEuODMzVjAiIGZpbGw9IiMwMDAiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=) center center no-repeat; }
+
+.checker span.checked:before { visibility: visible; opacity: 1; }
+
+
+/* ----------------------- Radio-buttons states ----------------------- */
+.radio { border-radius: 50%; }
+
+.radio span { position: absolute; z-index: 1; left: 0; top: 0; right: 0; bottom: 0; }
+.radio span:before { display: block; margin: 4px; width: 9px; height: 9px; background: #000; border-radius: 50%; content: ''; visibility: hidden; opacity: 0; }
+
+.radio span.checked:before { visibility: visible; opacity: 1; }
+
+
+/* ----------------------- Uploader ----------------------- */
+.e-uploader { display: block; position: relative; cursor: pointer; white-space: normal; }
+.e-uploader input { visibility: hidden; position: absolute !important; z-index: 5; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%; filter: alpha(opacity=0); -moz-opacity: 0; opacity: 0; border: none; background: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.e-uploader_btn { display: none; }
+.e-uploader_file { display: block; padding: 13px 10px; min-width: 180px; font: 400 14px/14px 'Lato', sans-serif; text-transform: uppercase; box-sizing: border-box; }
+

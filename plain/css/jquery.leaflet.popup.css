@@ -1,0 +1,207 @@
+/* -----------------------
+   ----------------------- Normalize ----------------------- */
+html { width: 100%; height: 100%; }
+body { width: 100%; height: 100%; margin: 0; box-sizing: border-box; }
+
+
+/* -----------------------
+   ----------------------- Transitions ----------------------- */
+.b-leaflet_box,
+.b-leaflet_perspective { -webkit-transition: -webkit-transform 400ms, opacity 400ms, visibility 400ms; -moz-transition: -moz-transform 400ms, opacity 400ms, visibility 400ms; -o-transition: -o-transform 400ms, opacity 400ms, visibility 400ms; transition: transform 400ms, opacity 400ms, visibility 400ms; }
+
+.b-leaflet_overlay,
+.b-leaflet_box_content { -webkit-transition: opacity 400ms, visibility 400ms; -moz-transition: opacity 400ms, visibility 400ms; -o-transition: opacity 400ms, visibility 400ms; transition: opacity 400ms, visibility 400ms; }
+
+
+/* -----------------------
+   ----------------------- Add to composite layers ----------------------- */
+.b-leaflet_box,
+.b-leaflet_overlay { -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; backface-visibility: hidden; }
+
+
+/* -----------------------
+   ----------------------- 3D transforms ----------------------- */
+.b-leaflet_perspective { position: relative; z-index: 25000; margin-left: auto; margin-right: auto; text-align: left; -webkit-perspective: 1500px; -moz-perspective: 1500px; perspective: 1500px; -webkit-transform-style: preserve-3d; -moz-transform-style: preserve-3d; transform-style: preserve-3d; }
+
+@media (min-width: 640px) {
+
+    .m-leaflet-type-image .b-leaflet_perspective { display: inline-block; }
+
+}
+
+
+/* -----------------------
+   ----------------------- Layout ----------------------- */
+.b-leaflet { position: fixed; z-index: 5000; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; overflow-x: hidden; overflow-y: hidden; /*-webkit-overflow-scrolling: touch; */}
+@media not all and (min-resolution:.001dpcm) { @supports (-webkit-appearance:none) { .b-leaflet { -webkit-overflow-scrolling: touch; } }} /* Safari iOS 10.1+ */
+
+.b-leaflet_capsule { display: table; width: 100%; height: 100%; overflow: hidden; border-collapse: collapse; table-layout: fixed; }
+.b-leaflet_capsule_inner { display: table-cell; vertical-align: middle; text-align: center; }
+
+/* * * Layout :: offsets * * */
+@media (max-width: 639px) {
+
+    .b-leaflet_capsule_inner { padding: 24px 10px !important; }
+    .m-leaflet-type-image .b-leaflet_capsule_inner { padding: 24px 32px !important; }
+
+}
+
+/* * * Layout :: sources container * * */
+.b-leaflet_inner_sources { position: absolute; left: -10000px; top: -10000px; height: 0; width: 0; overflow: hidden; visibility: hidden; }
+
+
+/* ----------------------- Scroll lock ----------------------- */
+.m-leaflet-outer-mode body { overflow-y: scroll; }
+
+.m-leaflet-outer-mode .b-leaflet { /*position: relative; */position: fixed; overflow-x: hidden; overflow-y: scroll; }
+.m-leaflet-outer-mode .b-leaflet_locker { position: fixed; overflow: hidden; left: 0; top: 0; right: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* ----------------------- Scroll unlock ----------------------- */
+.m-leaflet-inner-mode .b-leaflet_box_content { max-height: inherit; /*overflow-y: scroll; overflow-x: visible;*/ }
+
+
+/* -----------------------
+   ----------------------- Overlay ----------------------- */
+.b-leaflet_overlay { display: none; position: fixed; z-index: 0; left: 0; top: 0; right: 0; bottom: 0; pointer-events: auto; visibility: hidden; opacity: 0; background-color: #000; }
+.b-leaflet_overlay_loader { display: none; }
+
+.m-leaflet-overlay .b-leaflet_overlay { display: block; }
+.m-leaflet-loading .b-leaflet_overlay { background: #000 url('../../img/icons/loading.gif') center center no-repeat; }
+
+/* * * Webkit bug fix * * */
+.b-leaflet_overlay { -webkit-transform: translateZ(-1000px); transform: translateZ(-1000px); }
+
+
+/* ----------------------- Control buttons ----------------------- */
+/* * * Control buttons :: close in box * * */
+.b-leaflet_box .b-leaflet_close { position: absolute; z-index: 25; top: 8px; right: 8px; width: 32px; height: 32px; line-height: 32px; text-align: center; text-decoration: none; color: #9f9f9f; background: transparent; border: none; cursor: pointer; pointer-events: auto; }
+.b-leaflet_box .b-leaflet_close:before { display: block; width: 32px; height: 32px; font-size: 12px; line-height: 32px; background-size: auto; transition: opacity 250ms; }
+
+.b-leaflet_box .b-leaflet_close:hover { color: #fff; }
+
+/* * * Control buttons :: close on overlay * * */
+.b-leaflet_overlay ~ .b-leaflet_close { position: fixed; z-index: 25; top: 0; right: 0; width: 32px; height: 32px; font-size: 16px; line-height: 32px; text-align: center; text-decoration: none; color: #fff; cursor: pointer; pointer-events: auto; }
+.b-leaflet_overlay ~ .b-leaflet_close:before { display: block; width: inherit; height: inherit; line-height: inherit; }
+
+.b-leaflet_overlay ~ .b-leaflet_close:hover { opacity: .75; background: rgba(0, 0, 0, .25); }
+
+@media (min-width: 600px) {
+
+    .b-leaflet_overlay ~ .b-leaflet_close { width: 64px; height: 64px; font-size: 32px; line-height: 64px; }
+
+}
+
+/* * * Control buttons :: nav * * */
+.b-leaflet_box .b-leaflet_nav .b-leaflet_direction { position: absolute; z-index: 5; top: 50%; margin-top: -9px; width: 20px; height: 60px; text-align: center; color: #9f9f9f; cursor: pointer; pointer-events: auto; }
+.b-leaflet_box .b-leaflet_nav .b-leaflet_direction:before { display: block; font-weight: normal; font-size: 60px; line-height: 60px; text-align: center; }
+
+.b-leaflet_box .b-leaflet_nav .b-leaflet_direction:hover { color: #fff; }
+
+.b-leaflet_box .b-leaflet_nav .b-leaflet_prev { left: 25px; }
+.b-leaflet_box .b-leaflet_nav .b-leaflet_next { right: 25px; }
+
+.b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_direction { position: fixed; z-index: 5; top: 0; bottom: 0; width: 32px; text-align: center; color: #fff; cursor: pointer; pointer-events: auto; }
+.b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_direction:before { position: absolute; left: 50%; top: 50%; margin: -21px 0 0 -16px; width: inherit !important; height: 42px; font-weight: normal; font-size: 42px; line-height: 42px; text-align: center; }
+
+.b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_direction:hover { opacity: .75; background: rgba(0, 0, 0, .25); }
+
+.b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_prev { left: 0; }
+.b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_next { right: 0; }
+
+@media (min-width: 600px) {
+
+    .b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_direction { width: 64px; }
+    .b-leaflet_perspective ~ .b-leaflet_nav .b-leaflet_direction:before { margin: -32px 0 0 -32px; height: 64px; font-size: 60px; line-height: 64px; }
+
+}
+
+.b-leaflet_close,
+.b-leaflet_direction { -webkit-transition: all 400ms; -moz-transition: all 400ms; -o-transition: all 400ms; transition: all 400ms; }
+
+
+/* -----------------------
+   ----------------------- Box ----------------------- */
+.b-leaflet_box { position: relative; z-index: 25; margin-left: auto; margin-right: auto; visibility: hidden; opacity: 0; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+
+
+/* -----------------------
+   ----------------------- Box title ----------------------- */
+.b-leaflet_box_title { /*position: absolute; left: 0; right: 0; */margin: 14px auto -29px; font: 400 12px 'Lato', sans-serif; text-align: center; }
+.b-leaflet_box_title span { position: absolute; left: 0; bottom: 18px; right: 0; }
+
+
+/* ----------------------- Content types ----------------------- */
+/* * * Content popup * * */
+.b-leaflet_box { padding: 40px; font: 400 16px 'Lato', sans-serif; color: #000; background: #fff; border-radius: 0; }
+
+@media (max-width: 639px) {
+
+    .b-leaflet_box { padding: 30px 16px; }
+
+}
+
+.b-leaflet_heading { position: relative; margin: 16px 0; font: 400 14px 'Lato', sans-serif; color: #848484; }
+.b-leaflet_heading_title { margin-right: -20px; font: 300 30px 'Lato', sans-serif; color: #000; }
+
+.b-leaflet_heading:first-child { margin-top: -6px; }
+.b-leaflet_heading:last-child { margin-bottom: auto; }
+
+@media (max-width: 639px) {
+
+    .b-leaflet_heading_title { font: 300 24px 'Lato', sans-serif; }
+
+}
+
+.b-leaflet_wrap { margin: -4px -40px -40px; padding: 20px 40px 40px; background: #f8f9fa; border-top: 1px solid #ecedee; }
+
+@media (max-width: 639px) {
+
+    .b-leaflet_wrap { margin: -4px -16px -30px; padding: 20px 16px 16px; }
+
+}
+
+/* * * Image popup * * */
+.m-leaflet-type-image .b-leaflet_box { display: table; min-width: 1020px; min-height: 760px; height: 760px; color: #9f9f9f; background: #000; box-shadow: 0 0 25px rgba(0, 0, 0, .75); }
+
+.m-leaflet-type-image .b-leaflet_box_content { display: table-cell; vertical-align: middle; padding: 70px; color: inherit; background: none; overflow: hidden; }
+.m-leaflet-type-image .b-leaflet_box_content img { display: block; max-width: 880px; max-height: calc(100vh - 180px); margin: 0 auto; transform: translateZ(0); backface-visibility: hidden; }
+
+/* * * IFrame popup * * */
+.m-leaflet-type-iframe .b-leaflet_box { padding: 0; background: none; }
+.m-leaflet-type-iframe .b-leaflet_box_content { padding: 0; color: #fff; background: none; }
+
+.m-leaflet-type-iframe .b-leaflet_box_iframe { position: relative; height: 0; padding-bottom: 56.470588235294%; overflow: hidden; }
+.m-leaflet-type-iframe .b-leaflet_box_iframe iframe { position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; max-width: none; max-height: none; -webkit-backface-visibility: visible; -moz-backface-visibility: visible; backface-visibility: visible; -webkit-transform: translateZ(0); -moz-transform: translateZ(0); transform: translateZ(0); }
+
+
+/* ----------------------- Box show methods ----------------------- */
+.b-leaflet_box,
+
+.b-leaflet_content,
+.b-leaflet_content * { -webkit-transform: translateZ(0); -moz-transform: translateZ(0); transform: translateZ(0); }
+
+/* * * Scale * * */
+.m-leaflet-scale-transition .b-leaflet_box { -webkit-transform: scale(.6, .6); -moz-transform: scale(.6, .6); -ms-transform: scale(.6, .6); transform: scale(.6, .6); }
+
+/* * * Super scale * * */
+.m-leaflet-superScale-transition .b-leaflet_box { -webkit-transform: scale(1.4, 1.4); -moz-transform: scale(1.4, 1.4); -ms-transform: scale(1.4, 1.4); transform: scale(1.4, 1.4); }
+
+/* * * Drop * * */
+.m-leaflet-drop-transition .b-leaflet_box { -webkit-transform: translate(0, -150%); -moz-transform: translate(0, -150%); -ms-transform: translate(0, -150%); transform: translate(0, -150%); }
+
+/* * * Newspaper * * */
+.m-leaflet-newspaper-transition .b-leaflet_box { -webkit-transform: scale(.2, .2) rotate(720deg); -moz-transform: scale(.2, .2) rotate(720deg); -ms-transform: scale(.2, .2) rotate(720deg); transform: scale(.2, .2) rotate(720deg); }
+
+
+/* * * Drop 3d * * */
+.m-leaflet-drop3d-transition .b-leaflet_box { -webkit-transform-origin: top; -moz-transform-origin: top; -ms-transform-origin: top; transform-origin: top; -webkit-transform: translate3d(0, -100px, 0) rotateX(-90deg); -moz-transform: translate3d(0, -100px, 0) rotateX(-90deg); -ms-transform: translate3d(0, -100px, 0) rotateX(-90deg); transform: translate3d(0, -100px, 0) rotateX(-90deg); }
+
+/* * * Flip 3d * * */
+.m-leaflet-flip3d-transition .b-leaflet_box { -webkit-transform-origin: center top; -moz-transform-origin: center top; -ms-transform-origin: center top; transform-origin: center top; -webkit-transform: rotateY(-70deg); -moz-transform: rotateY(-70deg); -ms-transform: rotateY(-70deg); transform: rotateY(-70deg); }
+
+/* * * Flip 3d Vertical * * */
+.m-leaflet-flip3dVertical-transition .b-leaflet_box { -webkit-transform-origin: 0 50%; -moz-transform-origin: 0 50%; -ms-transform-origin: 0 50%; transform-origin: 0 50%; -webkit-transform: rotateX(-70deg); -moz-transform: rotateX(-70deg); -ms-transform: rotateX(-70deg); transform: rotateX(-70deg); }
+
+/* * * Side fall * * */
+.m-leaflet-sideFall-transition .b-leaflet_box { -webkit-transform-origin: 50%; -moz-transform-origin: 50%; -ms-transform-origin: 50%; transform-origin: 50%; -webkit-transform: translate(30%) translateZ(600px) rotate(10deg); -moz-transform: translate(30%) translateZ(600px) rotate(10deg); -ms-transform: translate(30%) translateZ(600px) rotate(10deg); transform: translate(30%) translateZ(600px) rotate(10deg); }
