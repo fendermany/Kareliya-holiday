@@ -782,11 +782,11 @@ span.b-pagination_bar_arrow svg [fill] { fill: #808080 !important; }
     width: 9px;
     height: 15px;
     display: inline-block;
-    background: url("../../img/calarrow.png") no-repeat left;
+    background: url("../..img/calarrow.png") no-repeat left;
 }
 .b-mp-summary_calendar_month .next{
     width: 9px;
     height: 15px;
     display: inline-block;
-    background: url("../../img/calarrow.png") no-repeat right;
+    background: url("../..img/calarrow.png") no-repeat right;
 }

@@ -3035,7 +3035,7 @@ body { width: 100%; height: 100%; margin: 0; -webkit-box-sizing: border-box; -mo
 .b-leaflet_overlay_loader { display: none; }
 
 .m-leaflet-overlay .b-leaflet_overlay { display: block; }
-.m-leaflet-loading .b-leaflet_overlay { background: #000 url('../../img/icons/loading.gif') center center no-repeat; }
+.m-leaflet-loading .b-leaflet_overlay { background: #000 url('../..img/icons/loading.gif') center center no-repeat; }
 
 /* * * Webkit bug fix * * */
 .b-leaflet_overlay { -webkit-transform: translateZ(-1000px); transform: translateZ(-1000px); }
@@ -5271,7 +5271,7 @@ span.b-pagination_bar_arrow svg [fill] { fill: #808080 !important; }
     width: 9px;
     height: 15px;
     display: inline-block;
-    background: url("../../img/calarrow.png") no-repeat left;
+    background: url("../..img/calarrow.png") no-repeat left;
     margin-left: 11px;
     margin-right: 27px;
 }
@@ -5279,6 +5279,6 @@ span.b-pagination_bar_arrow svg [fill] { fill: #808080 !important; }
     width: 9px;
     height: 15px;
     display: inline-block;
-    background: url("../../img/calarrow.png") no-repeat right;
+    background: url("../..img/calarrow.png") no-repeat right;
     margin-left: 27px;
 }

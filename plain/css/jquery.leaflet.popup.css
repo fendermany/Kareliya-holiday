@@ -67,7 +67,7 @@ body { width: 100%; height: 100%; margin: 0; box-sizing: border-box; }
 .b-leaflet_overlay_loader { display: none; }
 
 .m-leaflet-overlay .b-leaflet_overlay { display: block; }
-.m-leaflet-loading .b-leaflet_overlay { background: #000 url('../../img/icons/loading.gif') center center no-repeat; }
+.m-leaflet-loading .b-leaflet_overlay { background: #000 url('../..img/icons/loading.gif') center center no-repeat; }
 
 /* * * Webkit bug fix * * */
 .b-leaflet_overlay { -webkit-transform: translateZ(-1000px); transform: translateZ(-1000px); }
