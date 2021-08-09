@@ -1,0 +1,104 @@
+.visible {
+	display: block;
+}
+
+.hidden {
+	display: none;
+}
+
+.fade {
+	animation-name: fadeer;
+	animation-duration: 1.5s;
+}
+
+@keyframes fadeer {
+	from {
+		opacity: 0.1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+.transport {
+
+	/* .transport__item */
+	&__item {}
+
+	/* .transport__descr */
+	&__descr {
+		margin-bottom: 20px;
+	}
+
+	/* .transport__map */
+	&__map {
+		width: 100%;
+		max-height: 470px;
+	}
+
+	/* .transport__list */
+	&__list {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 30px;
+	}
+
+	/* .transport__list-item */
+	&__list-item {
+		display: flex;
+		column-gap: 10px;
+	}
+
+	/* .transport__list-picture */
+	&__list-picture {
+		width: 100px;
+		height: 100px;
+	}
+
+	/* .transport__list-descr */
+	&__list-descr {
+		font-size: 16px;
+		line-height: 26px;
+		font-weight: 400;
+		color: #000000;
+	}
+}
+
+.tabcontainer {
+	margin-top: 30px;
+}
+
+
+.tabheader {
+	margin-top: 50px;
+
+	/* .tabheader__items */
+	&__items {
+		display: flex;
+		column-gap: 50px;
+	}
+
+	/* .tabheader__item */
+	&__item {
+		font-size: 16px;
+		line-height: 19px;
+		text-decoration-line: underline;
+		font-weight: 400;
+		color: #2B78CF;
+
+		/* .tabheader__item_active */
+		&_active {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 19px;
+			text-decoration: none;
+			color: #000000;
+
+		}
+	}
+}
+
+.tabcontent {}
