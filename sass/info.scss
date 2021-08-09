@@ -1,6 +1,6 @@
 .ymaps-2-1-79-gototech,
 .ymaps-2-1-79-gotoymaps__container,
-.ymaps-2-1-79-copyright{
+.ymaps-2-1-79-copyright {
 	display: none !important;
 }
 
@@ -116,7 +116,19 @@
 	&__item {}
 
 	/* .slider1__item-img */
-	&__item-img {}
+	&__item-img {
+		width: 690px;
+		height: 500px;
+
+		img {
+
+			object-fit: cover;
+			object-position: center center;
+			transition: all 1s ease-out;
+			width: 100%;
+			height: 100%;
+		}
+	}
 
 	/* .slider1__item-descr */
 	&__item-descr {
@@ -137,7 +149,8 @@
 		transform: translateY(-50%);
 		left: 22px;
 		display: block;
-		&.swiper-button-disabled{
+
+		&.swiper-button-disabled {
 			display: none;
 		}
 	}
@@ -151,7 +164,8 @@
 		transform: translateY(-50%);
 		right: 22px;
 		display: block;
-		&.swiper-button-disabled{
+
+		&.swiper-button-disabled {
 			display: none;
 		}
 	}
@@ -172,7 +186,18 @@
 	&__item {}
 
 	/* .slider2__item-img */
-	&__item-img {}
+	&__item-img {
+		width: 690px;
+		height: 500px;
+
+		img {
+			object-fit: cover;
+			object-position: center center;
+			transition: all 1s ease-out;
+			width: 100%;
+			height: 100%;
+		}
+	}
 
 	&__prev {
 		background: url('../temp/info/slider1_prev.svg') no-repeat center center/contain;
@@ -183,7 +208,8 @@
 		transform: translateY(-50%);
 		left: 22px;
 		display: block;
-		&.swiper-button-disabled{
+
+		&.swiper-button-disabled {
 			display: none;
 		}
 	}
@@ -197,7 +223,8 @@
 		transform: translateY(-50%);
 		right: 22px;
 		display: block;
-		&.swiper-button-disabled{
+
+		&.swiper-button-disabled {
 			display: none;
 		}
 	}
@@ -206,6 +233,7 @@
 
 ._swiper {
 	overflow: hidden;
+
 	//.swiper-wrapper
 	.swiper-wrapper {
 		width: 100%;
@@ -214,29 +242,35 @@
 		display: flex;
 		position: relative;
 	}
+
 	&.swiper-container-vertical {
 		.swiper-wrapper {
 			flex-direction: column;
 		}
 	}
+
 	&.swiper-container-autoheight {
 		.swiper-wrapper {
 			align-items: flex-start;
 		}
 	}
 }
+
 .swiper-container-initialized {
 	.swiper-slide {
 		flex-shrink: 0;
 		// transition-property: transform;
 	}
 }
+
 .swiper-container-android {
+
 	.swiper-slide,
 	.swiper-wrapper {
 		transform: translate3d(0px, 0, 0);
 	}
 }
+
 .swiper-button-lock {
 	display: none !important;
 }

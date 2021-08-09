@@ -182,89 +182,197 @@
 						<h1 class="b-heading_title">Маршруты Заонежья</h1>
 					</header>
 
-					<form action="/php/form.php" method="post" data-checkup="true" data-xhr="true">
-
-						<div class="b-form_box">
-
-							<div class="row">
-								<div class="col-xs-7">
-
-									<span class="b-form_box_title">Множ. выбор</span>
-
+					<section class="p-route">
+						<form class="p-route__form" action="/php/form.php" method="post" data-checkup="true" data-xhr="true">
+							<div class="p-route__form-line">
+								<span class="p-route__form-line-title">Тип маршрута</span>
+								<div class="p-route__form-line-list">
+									<label><input type="checkbox" name="p-route-checkbox-1" value="on" checked />Пеший</label>
+									<label><input type="checkbox" name="p-route-checkbox-2" value="on" checked />Водный</label>
+									<label><input type="checkbox" name="p-route-checkbox-3" value="on" />На авто</label>
 								</div>
-								<div class="col-xs-8">
-
-									<div class="b-form_box_field list">
-										<label><input type="checkbox" name="group-checkbox-1" value="on" checked />вариант
-											1</label>
-										<label><input type="checkbox" name="group-checkbox-2" value="on" checked />вариант
-											2</label>
-										<label><input type="checkbox" name="group-checkbox-3" value="on" />вариант
-											3</label>
+							</div>
+							<div class="p-route__form-line">
+								<span class="p-route__form-line-title">Сезон</span>
+								<div class="p-route__form-line-list">
+									<label><input type="checkbox" name="p-route-checkbox-4" value="on" checked />Весна</label>
+									<label><input type="checkbox" name="p-route-checkbox-5" value="on" checked />Лето</label>
+									<label><input type="checkbox" name="p-route-checkbox-6" value="on" />Осень</label>
+									<label><input type="checkbox" name="p-route-checkbox-7" value="on" />Зима</label>
+								</div>
+							</div>
+						</form>
+						<div class="p-route__content">
+							<div class="p-route__wrapper">
+								<div class="p-route__item">
+									<a href="#" class="p-route__item-wrapper">
+										<div class="p-route__item-img">
+											<picture>
+												<img src="temp/routes/r1.png" title="r1" alt="r1">
+											</picture>
+										</div>
+										<div class="p-route__item-title">Пеший маршрут от Ламбас-Ручья до старинной церкви в д.
+											Вегоруксы</div>
+									</a>
+									<div class="p-route__item-type">
+										Тип маршрута:
+										<ul>
+											<li><a href="#">Пеший,</a></li>
+											<li><a href="#">Водный</a></li>
+										</ul>
 									</div>
-
-								</div>
-							</div>
-
-						</div>
-
-						<div class="b-form_box">
-
-							<div class="row">
-								<div class="col-xs-7">
-
-									<label class="b-form_box_title b-form_box_title__middle"
-										for="accommodation-form-text">Текстовое поле</label>
-
-								</div>
-								<div class="col-xs-17">
-
-									<div class="b-form_box_field">
-										<input type="text" name="text" id="accommodation-form-text"
-											placeholder="информация вводится клиентом вручную" />
+									<div class="p-route__item-duration">
+										Продолжительность:
+										<span>2 дня / 1 ночь или 1 день</span>
 									</div>
-
-									<div class="b-form_box_notice">Комментарий под полем, поясняюзщий вводимую
-										информацию и формат</div>
-
-								</div>
-							</div>
-
-						</div>
-
-						<div class="b-form_box">
-
-							<div class="row">
-								<div class="col-xs-7">
-
-									<span class="b-form_box_title">Однозначный выбор</span>
-
-								</div>
-								<div class="col-xs-8">
-
-									<div class="b-form_box_field list">
-										<label><input type="radio" name="radio" value="1" checked />да</label>
-										<label><input type="radio" name="radio" value="0" />нет</label>
+									<div class="p-route__item-season">
+										Сезон:
+										<ul>
+											<li><a href="#">Лето,</a></li>
+											<li><a href="#">Осень</a></li>
+										</ul>
 									</div>
-
+									<div class="p-route__item-descr">
+										г. Петрозаводск – г. Медвежьегорск – с. Шуньга - с. Толвуя – д. Поля – д. Типиницы – д.
+										Космозеро - ур. Узкие – с. Великая Губа / д. Оятевщина – о. Кижи – с. Великая Губа / д.
+										Оятевщина – г. Медвежьегорск – г. Петрозаводск
+									</div>
 								</div>
-							</div>
-
-						</div>
-
-						<div class="b-form_bottom">
-
-							<div class="row">
-								<div class="col-xs-8 col-xs-offset-7">
-
-									<button type="submit" class="e-btn e-btn_md e-btn_blue">Подобрать</button>
-
+								<div class="p-route__item">
+									<a href="#" class="p-route__item-wrapper">
+										<div class="p-route__item-img">
+											<picture>
+												<img src="temp/routes/r2.png" title="r2" alt="r2">
+											</picture>
+										</div>
+										<div class="p-route__item-title">Великая Губа - Кижи на лодке</div>
+									</a>
+									<div class="p-route__item-type">
+										Тип маршрута:
+										<ul>
+											<li><a href="#">Пеший</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-duration">
+										Продолжительность:
+										<span>3 дня</span>
+									</div>
+									<div class="p-route__item-season">
+										Сезон:
+										<ul>
+											<li><a href="#">Весна,</a></li>
+											<li><a href="#">Лето,</a></li>
+											<li><a href="#">Осень,</a></li>
+											<li><a href="#">Зима</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-descr">
+										г. Петрозаводск – г. Медвежьегорск – с. Шуньга – с. Толвуя – о. Большой Клименецкий – д.
+										Корба – д. Еглов, д. Подъельники, о. Волкостров - о. Кижи – г. Петрозаводск
+									</div>
 								</div>
-							</div>
-
-						</div>
-
-					</form>
+								<div class="p-route__item">
+									<a href="#" class="p-route__item-wrapper">
+										<div class="p-route__item-img">
+											<picture>
+												<img src="temp/routes/r3.png" title="r3" alt="r3">
+											</picture>
+										</div>
+										<div class="p-route__item-title">Пеший маршрут от Ламбас-Ручья до старинной церкви в д.
+											Вегоруксы</div>
+									</a>
+									<div class="p-route__item-type">
+										Тип маршрута:
+										<ul>
+											<li><a href="#">Пеший,</a></li>
+											<li><a href="#">Водный</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-duration">
+										Продолжительность:
+										<span>2 дня / 1 ночь или 1 день</span>
+									</div>
+									<div class="p-route__item-season">
+										Сезон:
+										<ul>
+											<li><a href="#">Лето,</a></li>
+											<li><a href="#">Осень</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-descr">
+										г. Петрозаводск – г. Медвежьегорск – с. Шуньга - с. Толвуя – д. Поля – д. Типиницы – д.
+										Космозеро - ур. Узкие – с. Великая Губа / д. Оятевщина – о. Кижи – с. Великая Губа / д.
+										Оятевщина – г. Медвежьегорск – г. Петрозаводск
+									</div>
+								</div>
+								<div class="p-route__item">
+									<a href="#" class="p-route__item-wrapper">
+										<div class="p-route__item-img">
+											<picture>
+												<img src="temp/routes/r4.png" title="r4" alt="r4">
+											</picture>
+										</div>
+										<div class="p-route__item-title">Великая Губа - Кижи на лодке</div>
+									</a>
+									<div class="p-route__item-type">
+										Тип маршрута:
+										<ul>
+											<li><a href="#">Пеший</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-duration">
+										Продолжительность:
+										<span>3 дня</span>
+									</div>
+									<div class="p-route__item-season">
+										Сезон:
+										<ul>
+											<li><a href="#">Весна,</a></li>
+											<li><a href="#">Лето,</a></li>
+											<li><a href="#">Осень,</a></li>
+											<li><a href="#">Зима</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-descr">
+										г. Петрозаводск – г. Медвежьегорск – с. Шуньга – с. Толвуя – о. Большой Клименецкий – д.
+										Корба – д. Еглов, д. Подъельники, о. Волкостров - о. Кижи – г. Петрозаводск
+									</div>
+								</div>
+								<div class="p-route__item">
+									<a href="#" class="p-route__item-wrapper">
+										<div class="p-route__item-img">
+											<picture>
+												<img src="temp/routes/r5.png" title="r5" alt="r5">
+											</picture>
+										</div>
+										<div class="p-route__item-title">Пеший маршрут от Ламбас-Ручья до старинной церкви в д.
+											Вегоруксы</div>
+									</a>
+									<div class="p-route__item-type">
+										Тип маршрута:
+										<ul>
+											<li><a href="#">Пеший,</a></li>
+											<li><a href="#">Водный</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-duration">
+										Продолжительность:
+										<span>2 дня / 1 ночь или 1 день</span>
+									</div>
+									<div class="p-route__item-season">
+										Сезон:
+										<ul>
+											<li><a href="#">Лето,</a></li>
+											<li><a href="#">Осень</a></li>
+										</ul>
+									</div>
+									<div class="p-route__item-descr">
+										г. Петрозаводск – г. Медвежьегорск – с. Шуньга - с. Толвуя – д. Поля – д. Типиницы – д.
+										Космозеро - ур. Узкие – с. Великая Губа / д. Оятевщина – о. Кижи – с. Великая Губа / д.
+										Оятевщина – г. Медвежьегорск – г. Петрозаводск
+									</div>
+								</div>
+					</section>
 
 					<div class="b-pagination b-pagination__close">
 
@@ -312,9 +420,6 @@
 						</div>
 
 					</div>
-
-
-
 				</div>
 			</main>
 
