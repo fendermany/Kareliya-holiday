@@ -1,6 +1,6 @@
 Привет. Я создал первый коммит на основе приложенного к заданию архива.
 
-Новые страницы в html: about.html, info.html, transport.html (обновляется)
+Новые страницы в html: about.html, info.html, transport.html, video.html (обновляется)
 
 Новые стили на всех страницах в папке css (подключены в header)
 
