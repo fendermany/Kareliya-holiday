@@ -23,6 +23,11 @@
 		flex-direction: column;
 		width: 240px;
 		row-gap: 16px;
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
 	}
 
 	/* .p-legends__picture */
@@ -40,11 +45,7 @@
 			height: 100%;
 		}
 
-		&:hover {
-			img {
-				transform: scale(1.1);
-			}
-		}
+		
 	}
 
 	/* .p-legends__title */
