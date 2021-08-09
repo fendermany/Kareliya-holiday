@@ -1,0 +1,41 @@
+.p-video {
+	margin-top: 50px;
+
+	/* .p-video__discl */
+	&__discl {
+		background: #E0F7E4;
+		padding: 30px;
+		font-style: italic;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+		color: #17792A;
+
+	}
+
+	/* .p-video__container */
+	&__container {
+		margin-top: 30px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 50px;
+	}
+
+	/* .p-video__item */
+	&__item {
+	}
+
+	/* .p-video__video */
+	&__video {
+		max-height: 470px;
+	}
+
+	/* .p-video__descr */
+	&__descr {
+		margin-top: 20px;
+		font-size: 16px;
+		line-height: 26px;
+		font-weight: 400;
+		color: #000000;
+	}
+}
