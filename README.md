@@ -2,7 +2,7 @@
 
 Структура немного затёрлась из-за обновления во втором коммите, поскольку были затронуты все картинки, надеюсь Вам это не помешает.
 
-Новые страницы в html: about.html, info.html, transport.html, video.html (обновляется)
+Новые страницы в html: about.html, info.html, transport.html, video.html, legends.html (обновляется)
 
 Новые стили на всех страницах в папке css (подключены в header)
 
