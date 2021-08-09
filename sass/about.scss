@@ -166,5 +166,8 @@ a {
 		display: flex;
 		list-style: none;
 		column-gap: 28px;
+		img:hover{
+			filter: brightness(80%);
+		}
 	}
 }
