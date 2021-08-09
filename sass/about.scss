@@ -13,6 +13,7 @@ a {
 .about {
 	background: #fff;
 	padding: 30px 0 0 0;
+
 	/* .about__title */
 	&__title {
 		font-weight: 900;
@@ -47,12 +48,6 @@ a {
 	&__item {
 		display: grid;
 		grid-template: 300px / 310px 270px;
-	}
-
-	/* .reasons__picture */
-	&__picture {
-		object-fit: cover;
-		overflow: hidden;
 
 		img {
 			transition: all 1s ease-out;
@@ -63,6 +58,14 @@ a {
 				transform: scale(1.1);
 			}
 		}
+	}
+
+	/* .reasons__picture */
+	&__picture {
+		object-fit: cover;
+		overflow: hidden;
+
+
 	}
 
 	/* .reasons__descr */
@@ -76,6 +79,9 @@ a {
 		justify-content: center;
 		color: #FFFFFF;
 		padding: 25px;
+		&:hover{
+			background: #219036;
+		}
 	}
 }
 
@@ -116,6 +122,10 @@ a {
 		align-items: center;
 		justify-content: center;
 		background: #183F7F;
+
+		&:hover {
+			background: #2455a5;
+		}
 	}
 
 	/* .info__subtitle */
