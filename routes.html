@@ -20,8 +20,7 @@
 
 	<!-- Styles -->
 	<link href="plain/build/site.min.css" type="text/css" rel="stylesheet" />
-	<link href="css/info.min.css" type="text/css" rel="stylesheet" />
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=a88bca7f-ebb2-4ac2-ada8-41b1a00bfa94" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/routes.min.css">
 
 	<!--[if lt IE 10]>
 
@@ -176,169 +175,151 @@
 
 					<ul class="b-path">
 						<li><a href="#"><span>Главная</span></a></li>
-						<li><a href="#"><span>О карелии</span></a></li>
+						<li><a href="#"><span>Туры в карелию</span></a></li>
 					</ul>
 
 					<header class="b-heading">
-						<h1 class="b-heading_title">Общая информация о Заонежье</h1>
+						<h1 class="b-heading_title">Маршруты Заонежья</h1>
 					</header>
 
-					<section class="g-info">
-						<div class="g-info__descr">
-							Заоне́жье (карел. Äänisniemi)— историческое название территории Заонежского полуострова
-							и примыкающих к нему островов Кижских шхер в северо-восточной части Онежского озера.
-							Административно территория Заонежья входит в состав Медвежьегорского района Республики Карелия.
-						</div>
-						<h3 class="g-info__subtitle">Географическое положение</h3>
-						<div id="mapInfo" class="g-info__map">
-							<!-- <picture>
-								<img src="temp/info/map.png" title="map" alt="map">
-							</picture> -->
-							<div class="g-info__map-descr">
-								<span class="g-info__map-descr-title">
-									Географические координаты:<br>
-									62°21′ с. ш. 35°11′ в. д.
-								</span>
-								<div class="g-info__map-descr-list">
-									Удаленность от основных городов:
-									<ul>
-										<li>Медвежьегорск - 114 км</li>
-										<li>Петрозаводск - 60 км (по воде) или 250 км по суше)</li>
-										<li>Москва - 950 км</li>
-										<li>Санкт-Петербург - 420 км</li>
-										<li>Хельсинки - 750 км</li>
-									</ul>
+					<form action="/php/form.php" method="post" data-checkup="true" data-xhr="true">
+
+						<div class="b-form_box">
+
+							<div class="row">
+								<div class="col-xs-7">
+
+									<span class="b-form_box_title">Множ. выбор</span>
+
+								</div>
+								<div class="col-xs-8">
+
+									<div class="b-form_box_field list">
+										<label><input type="checkbox" name="group-checkbox-1" value="on" checked />вариант
+											1</label>
+										<label><input type="checkbox" name="group-checkbox-2" value="on" checked />вариант
+											2</label>
+										<label><input type="checkbox" name="group-checkbox-3" value="on" />вариант
+											3</label>
+									</div>
+
 								</div>
 							</div>
+
 						</div>
-						<h3 class="g-info__subtitle">История территории</h3>
-						<div class="g-info__descr">
-							Период первоначального освоения Карелии, в том числе и Заонежья, происходил в эпоху мезолита[2]
-							(могильник на острове Южный Олений). В X—XIII веках первобытные семейно-родовые группы саамов
-							сменили прибалтийско-финские племена — сегодняшние вепсы, карелы и финны. С XV века — территория
-							Заонежья в составе Заонежских погостов Обонежской пятины Новгородских земель Московского княжества,
-							осваивается русскими переселенцами.<br>
-							К началу XX века территория Заонежья являлась самой густонаселенной территорией Олонецкой губернии.
-						</div>
-						<div class="g-info__slider1 slider1">
-							<div class="slider1__wrapper _swiper">
-								<div class="slider1__item">
-									<div class="slider1__item-img">
-										<picture>
-											<img src="temp/info/slider_item.png" title="slider_item" alt="slider_item">
-										</picture>
-									</div>
-									<div class="slider1__item-descr">
-										Писцовые и переписные книги Заонежья XVII век: материалы к истории Заонежья
-									</div>
+
+						<div class="b-form_box">
+
+							<div class="row">
+								<div class="col-xs-7">
+
+									<label class="b-form_box_title b-form_box_title__middle"
+										for="accommodation-form-text">Текстовое поле</label>
+
 								</div>
-								<div class="slider1__item">
-									<div class="slider1__item-img">
-										<picture>
-											<img src="temp/info/slider2_item.png" title="slider_item" alt="slider_item">
-										</picture>
+								<div class="col-xs-17">
+
+									<div class="b-form_box_field">
+										<input type="text" name="text" id="accommodation-form-text"
+											placeholder="информация вводится клиентом вручную" />
 									</div>
-									<div class="slider1__item-descr">
-										Писцовые и переписные книги Заонежья XVII век: материалы к истории Заонежья
-									</div>
-								</div>
-								<div class="slider1__item">
-									<div class="slider1__item-img">
-										<picture>
-											<img src="temp/info/slider_item.png" title="slider_item" alt="slider_item">
-										</picture>
-									</div>
-									<div class="slider1__item-descr">
-										Писцовые и переписные книги Заонежья XVII век: материалы к истории Заонежья
-									</div>
-								</div>
-								<div class="slider1__item">
-									<div class="slider1__item-img">
-										<picture>
-											<img src="temp/info/slider2_item.png" title="slider_item" alt="slider_item">
-										</picture>
-									</div>
-									<div class="slider1__item-descr">
-										Писцовые и переписные книги Заонежья XVII век: материалы к истории Заонежья
-									</div>
+
+									<div class="b-form_box_notice">Комментарий под полем, поясняюзщий вводимую
+										информацию и формат</div>
+
 								</div>
 							</div>
-							<div class="slider1__prev"></div>
-							<div class="slider1__next"></div>
+
 						</div>
-						<h3 class="g-info__subtitle">Природные особенности</h3>
-						<div class="g-info__descr">
-							Заонежский полуостров омывается с юго-востока водами Повенецкого залива, с юга — заливами Малого и
-							Центрального Онего, с запада — заливом Большое Онего. К территории Заонежья относятся более 500
-							островов Кижских шхер, крупнейшие из них — Большой Клименецкий, Большой Леликовский, Оленьи
-							острова.
-							<br><br>
-							Почвы полуострова сформированы карбонатными и шунгитосодержащими породами, являющимися естественным
-							адсорбентом для озёрной воды и основным компонентом «заонежского чернозёма». Повышенное плодородие
-							почв Заонежья, с начала освоения территории Карелии, привлекало сюда земледельцев.
-						</div>
-						<div class="g-info__slider2 slider2">
-							<div class="slider2__wrapper _swiper">
-								<div class="slider2__item">
-									<div class="slider2__item-img">
-										<picture>
-											<img src="temp/info/slider2_item.png" title="slider2_item" alt="slider2_item">
-										</picture>
-									</div>
+
+						<div class="b-form_box">
+
+							<div class="row">
+								<div class="col-xs-7">
+
+									<span class="b-form_box_title">Однозначный выбор</span>
+
 								</div>
-								<div class="slider2__item">
-									<div class="slider2__item-img">
-										<picture>
-											<img src="temp/info/slider_item.png" title="slider2_item" alt="slider2_item">
-										</picture>
+								<div class="col-xs-8">
+
+									<div class="b-form_box_field list">
+										<label><input type="radio" name="radio" value="1" checked />да</label>
+										<label><input type="radio" name="radio" value="0" />нет</label>
 									</div>
-								</div>
-								<div class="slider2__item">
-									<div class="slider2__item-img">
-										<picture>
-											<img src="temp/info/slider2_item.png" title="slider2_item" alt="slider2_item">
-										</picture>
-									</div>
-								</div>
-								<div class="slider2__item">
-									<div class="slider2__item-img">
-										<picture>
-											<img src="temp/info/slider_item.png" title="slider2_item" alt="slider2_item">
-										</picture>
-									</div>
-								</div>
-								<div class="slider2__item">
-									<div class="slider2__item-img">
-										<picture>
-											<img src="temp/info/slider2_item.png" title="slider2_item" alt="slider2_item">
-										</picture>
-									</div>
+
 								</div>
 							</div>
-							<div class="slider2__prev"></div>
-							<div class="slider2__next"></div>
+
 						</div>
-					</section>
+
+						<div class="b-form_bottom">
+
+							<div class="row">
+								<div class="col-xs-8 col-xs-offset-7">
+
+									<button type="submit" class="e-btn e-btn_md e-btn_blue">Подобрать</button>
+
+								</div>
+							</div>
+
+						</div>
+
+					</form>
+
+					<div class="b-pagination b-pagination__close">
+
+						<div class="b-pagination_label">Страницы:</div>
+
+						<div class="b-pagination_list">
+
+							<span>1</span>
+							<a href="#">2</a>
+							<a href="#">3</a>
+							<a href="#">4</a>
+							<a href="#">5</a>
+							<a href="#">6</a>
+							<a href="#">7</a>
+							<a href="#">8</a>
+							<a href="#">9</a>
+							<a href="#">10</a>
+							<a href="#" class="b-pagination_list_ellipsis">…</a>
+							<a href="#">17</a>
+
+						</div>
+
+						<div class="b-pagination_bar">
+
+							<span class="b-pagination_bar_arrow b-pagination_bar_arrow__prev">
+								<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1"
+									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<polygon fill="#2B78CF"
+										points="11 5.48228346 11 4.51771654 2.11334656 4.51771654 6.45433078 0.836614173 5.78001322 0 0 4.98031496 0 5 5.78001322 10 6.45433078 9.16338583 2.11334656 5.48228346 11 5.48228346">
+									</polygon>
+								</svg>
+								предыдущая
+							</span>
+
+							<a class="b-pagination_bar_arrow b-pagination_bar_arrow__next" href="#">
+								следующая
+								<svg width="11px" height="10px" viewBox="0 0 11 10" version="1.1"
+									xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<polygon fill="#2B78CF"
+										points="0 5.48228346 0 4.51771654 8.88665344 4.51771654 4.54566922 0.836614173 5.21998678 0 11 4.98031496 11 5 5.21998678 10 4.54566922 9.16338583 8.88665344 5.48228346 0 5.48228346">
+									</polygon>
+								</svg>
+							</a>
+
+						</div>
+
+					</div>
+
+
 
 				</div>
 			</main>
 
 			<!-- Sidebar -->
 			<aside class="b-sidebar">
-
-				<div class="b-sidebar_nav b-sidebar_widget">
-
-					<ul class="b-sidebar_nav_menu">
-						<li class="hasChild"><a href="#">Общая информация об&nbsp;отдыхе в Карелии</a></li>
-						<li class="hasChild"><a href="#">Глава туристской республики</a></li>
-						<li class="hasChild current"><a href="#">Природа Карелии</a></li>
-						<li class="hasChild"><a href="#">Историко-культурные территории</a></li>
-						<li class="hasChild"><a href="#">Культурные традиции</a></li>
-						<li class="hasChild"><a href="#">Народное творчество</a></li>
-						<li class="hasChild"><a href="#">Фоторепортажи</a></li>
-					</ul>
-
-				</div>
 
 				<div class="b-sidebar_widget">
 
@@ -447,6 +428,49 @@
 		<!-- Footer -->
 		<footer class="b-footer">
 
+			<div class="b-footer_banners">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-xs-4d8">
+
+							<a class="b-footer_banners_item" href="#" title="Баннер #1">
+								<img src="temp/pic-04.jpg" alt="Баннер #1" />
+							</a>
+
+						</div>
+						<div class="col-xs-4d8">
+
+							<a class="b-footer_banners_item" href="#" title="Баннер #2">
+								<img src="temp/pic-05.jpg" alt="Баннер #2" />
+							</a>
+
+						</div>
+						<div class="col-xs-4d8">
+
+							<a class="b-footer_banners_item" href="#" title="Баннер #3">
+								<img src="temp/pic-06.jpg" alt="Баннер #3" />
+							</a>
+
+						</div>
+						<div class="col-xs-4d8">
+
+							<a class="b-footer_banners_item" href="#" title="Баннер #4">
+								<img src="temp/pic-07.jpg" alt="Баннер #4" />
+							</a>
+
+						</div>
+						<div class="col-xs-4d8">
+
+							<a class="b-footer_banners_item" href="#" title="Баннер #5">
+								<img src="temp/pic-08.jpg" alt="Баннер #5" />
+							</a>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
 
 			<div class="b-footer_main">
 				<div class="container">
@@ -629,9 +653,7 @@
 
 	<!-- Template -->
 	<script type="text/javascript" src="plain/build/site.min.js"></script>
-	<script src="plain/js/swiper.min.js"></script>
-	<script src="plain/js/sliders.js"></script>
-	<script src="plain/js/maps-new.js"></script>
+
 
 </body>
 

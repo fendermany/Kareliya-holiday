@@ -21,6 +21,7 @@
 	<!-- Styles -->
 	<link href="plain/build/site.min.css" type="text/css" rel="stylesheet" />
 	<link href="css/transport.min.css" type="text/css" rel="stylesheet" />
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=a88bca7f-ebb2-4ac2-ada8-41b1a00bfa94" type="text/javascript"></script>
 
 	<!--[if lt IE 10]>
 
@@ -201,10 +202,10 @@
 									движения транспорта и стоимости билетов представлена по состоянию на 2021 год. Уточняйте
 									цены, наличие рейсов и время отправления на нужную дату на официальных сайтах.
 								</div>
-								<div class="transport__map">
-									<picture>
+								<div id="mapTransport1" class="transport__map">
+									<!-- <picture>
 										<img src="temp/transport/map.png" title="map" alt="map">
-									</picture>
+									</picture> -->
 								</div>
 								<ul class="transport__list">
 									<li class="transport__list-item">
@@ -294,10 +295,10 @@
 									движения транспорта и стоимости билетов представлена по состоянию на 2021 год. Уточняйте
 									цены, наличие рейсов и время отправления на нужную дату на официальных сайтах.
 								</div>
-								<div class="transport__map">
-									<picture>
+								<div id="mapTransport2" class="transport__map">
+									<!-- <picture>
 										<img src="temp/transport/map.png" title="map" alt="map">
-									</picture>
+									</picture> -->
 								</div>
 								<ul class="transport__list">
 									<li class="transport__list-item">
@@ -691,6 +692,7 @@
 	<!-- Template -->
 	<script type="text/javascript" src="plain/build/site.min.js"></script>
 	<script src="plain/js/tabs.js"></script>
+	<script src="plain/js/maps-new.js"></script>
 </body>
 
 </html>
