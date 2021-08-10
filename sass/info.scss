@@ -149,7 +149,7 @@
 		transform: translateY(-50%);
 		left: 22px;
 		display: block;
-
+		cursor: pointer;
 		&.swiper-button-disabled {
 			display: none;
 		}
@@ -164,7 +164,7 @@
 		transform: translateY(-50%);
 		right: 22px;
 		display: block;
-
+		cursor: pointer;
 		&.swiper-button-disabled {
 			display: none;
 		}
@@ -208,7 +208,7 @@
 		transform: translateY(-50%);
 		left: 22px;
 		display: block;
-
+		cursor: pointer;
 		&.swiper-button-disabled {
 			display: none;
 		}
@@ -223,7 +223,7 @@
 		transform: translateY(-50%);
 		right: 22px;
 		display: block;
-
+		cursor: pointer;
 		&.swiper-button-disabled {
 			display: none;
 		}
